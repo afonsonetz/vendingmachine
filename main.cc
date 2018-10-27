@@ -3,12 +3,21 @@ using namespace std;
 
 
 class MaquinaDeVendas
-
 {
     private:
     int saldo = 100;
     int troco;
+    MaquinaDeVendas() {}
+    MaquinaDeVendas(MaquinaDeVendas const&);
+    ~MaquinaDeVendas() {}
+    void operator=(MaquinaDeVendas const&);
+
     public:
+    static MaquinaDeVendas& getInstance() {
+	    static MaquinaDeVendas maquina;
+	    return maquina;
+    }
+
     int comprar(int *produto, int dinheiro, int *troco)
     {
         int preco = 1;
@@ -31,3 +40,10 @@ class MaquinaDeVendas
 
     }
 };
+
+int main (int argc, char* argv[]) {
+	MaquinaDeVendas::getInstance();
+
+	return 0;
+}
+
