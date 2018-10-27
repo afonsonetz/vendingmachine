@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-class VendingMachine
+
+class MaquinaDeVendas
+
 {
     private:
     int saldo = 100;
