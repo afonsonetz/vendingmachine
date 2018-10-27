@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class Maquina
+class VendingMachine
 {
     private:
     int saldo = 100;
-
+    int troco;
     public:
     int comprar(int *produto, int dinheiro, int *troco)
     {
@@ -29,4 +29,3 @@ class Maquina
 
     }
 };
-
