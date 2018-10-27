@@ -1,12 +1,19 @@
 #include <iostream>
 using namespace std;
 
+#include "produto.hpp"
+
+#define MAX_PRODUTOS 30
+
 
 class MaquinaDeVendas
 {
     private:
     int saldo = 100;
     int troco;
+
+    Produto *stock[MAX_PRODUTOS] = {nullptr};
+
     MaquinaDeVendas() {}
     MaquinaDeVendas(MaquinaDeVendas const&);
     ~MaquinaDeVendas() {}
